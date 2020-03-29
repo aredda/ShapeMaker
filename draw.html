@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/graphic.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/point.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/drawer.js"></script>
+    <title>Draw Shapes</title>
+</head>
+
+<body class="container-fluid">
+    <div class="row bg-info p-3 mb-1 shadow text-white border-bottom border-light">
+        <div class="col-lg-4">
+            <button id="btn-triangle" class="btn btn-sm btn-light text-info">Draw Triangle</button>
+            <button id="btn-rectangle" class="btn btn-sm btn-light text-info">Draw Rectangle</button>
+        </div>
+        <div class="col-lg-4 form-inline">
+            <input id="txt-unit" class="form-control form-control-sm shadow" type="number" min="40"
+                placeholder="Grid Unit Size" />
+            <button id="btn-configure" class="btn btn-sm btn-outline-light mx-2">Configure</button>
+            <input id="txt-color" class="h-100 border-0 p-0" type="color" value="#17a2b8" />
+        </div>
+        <div class="col-lg-4 text-right">
+            <button id="btn-points" class="btn btn-sm btn-outline-light">Toggle Points</button>
+            <button id="btn-lines" class="btn btn-sm btn-outline-light">Toggle Grid Lines</button>
+            <button id="btn-clear" class="btn btn-sm btn-danger">Clear</button>
+        </div>
+    </div>
+    <div class="row" id="panel"></div>
+
+    <div class="toast shadow-lg">
+        <div class="toast-header bg-success text-white">
+            <strong class="mr-auto">Additional information</strong>
+            <button class="ml-2 mb-1 close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body container"></div>
+    </div>
+</body>
+
+</html>

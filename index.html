@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn Geometry</title>
+    <link href="css/graphic.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/cloudSpawner.js"></script>
+</head>
+<body class="container bg-sky">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="my-5 text-primary">Welcome Kids!</h1>
+            <h5 class="text-dark">There are countless various different shapes in geometry,</h5>
+            <h5 class="mb-5 text-dark">But this small website focuses specifically on shapes like <span class='text-danger'>triangles</span>, <span class='text-info'>rectangles</span> and some of their geometrical characteristics.</h5>
+        </div>
+        <div class="col-lg-12 text-center">
+            <button class="btn btn-lg btn-danger tab-activator">Triangles</button>
+            <button class="btn btn-lg btn-primary tab-activator">Rectangles</button>
+            <button class="btn btn-lg btn-success"><a class="text-white" href="draw.html">Draw Shapes</a></button>
+        </div>
+    </div>
+    <div class="row m-5 py-5 bg-light text-dark text-center shadow-lg rounded-lg">
+        <div class="tab col-lg-12 px-4">
+            <img style="width: 10%" class="mb-4" src="shapes/tri.png" />
+            <p>Triangles are three sided polygons. One of the most interesting things about triangles is that if you sum up the three angles within any triangle, they will always total 180 degrees. This comes in handy when working on geometry problems.</p>
+            <p>There are several types of triangles. Some triangles can be described by their sides, like the equilateral, isosceles, and scalene triangles. Some triangles are described by their angles like the right, obtuse, and acute triangles.</p>
+        </div>
+        <div class="tab col-lg-12 px-4">
+            <img style="width: 15%" class="mb-4" src="shapes/square.png" />
+            <p>A four-sided flat shape with straight sides where all interior angles are right angles (90 degrees), also opposite sides are parallel and of equal length. <br><br>Example: A square is a special type of rectangle.</p>
+        </div>
+        
+    </div>
+
+    <script>
+        $(document).ready (function (){
+
+            $(".tab").last().hide(0);
+
+            $(".tab-activator").click (function ()
+            {
+                var index = $(this).index();
+
+                $(".tab").slideUp (1000);
+                $(".tab").eq(index).slideDown(1000);
+            });
+
+        });
+    </script>
+</body>
+</html>

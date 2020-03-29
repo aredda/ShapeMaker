@@ -1,0 +1,131 @@
+@keyframes anim_scale 
+{
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 1;
+    }
+}
+
+@keyframes anim_hover
+{
+    0% {
+        left: -300px;
+    }
+    50% {
+        left: 500px;
+    }
+    100% {
+        left: 1300px;
+    }
+}
+
+html, body 
+{
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    overflow: hidden;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+.bg-sky
+{
+    background: linear-gradient(#bae9ff 55%, white);
+}
+
+#panel
+{
+    position: relative;
+    height: 100%;
+}
+
+.point, 
+.grid-line, 
+.line, 
+.cloud,
+.toast
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.point
+{
+    z-index: 1;
+    width: 7px;
+    height: 7px;
+    background: rgb(59, 59, 59);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background 0.75s;
+}
+
+.point:hover
+{
+    background: #28a745;
+}
+
+.point.selected
+{
+    background: #17a2b8;
+    box-shadow: 0 0 10px #17a2b8;
+}
+
+.point.selected:hover
+{
+    background: tomato;
+}
+
+.grid-line
+{
+    z-index: -1;
+    border: 1px solid silver;
+}
+
+.line
+{
+    z-index: 0;
+    border: 2px solid;
+    animation-name: anim_scale;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+.cloud 
+{
+    left: -300px;
+    height: auto;
+    width: 200px;
+    opacity: 0.5;
+    z-index: -100;
+    animation-name: anim_hover;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.over
+{
+    z-index: 1000;
+}
+
+.toast
+{
+    display: none;
+    opacity: 1;
+    z-index: 1001;
+    right: 0;
+    margin: 80px 20px;
+}
